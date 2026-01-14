@@ -5,10 +5,10 @@ plugins {
 }
 
 dependencies {
-  runtimeOnly(project(":dist:bom:controlplane-base-bom"))
   runtimeOnly(project(":dist:bom:dataplane-base-bom"))
-  runtimeOnly(project(":extensions:common:iam:iam-mock"))
-  runtimeOnly(project(":extensions:common:iam:decentralized-identity:identity-did-core"))
+  runtimeOnly(project(":extensions:data-plane:data-plane-http"))
+  runtimeOnly(project(":extensions:data-plane:data-plane-signaling:data-plane-signaling-api"))
+  runtimeOnly(project(":extensions:data-plane:data-plane-self-registration"))
 }
 
 application {
@@ -18,7 +18,7 @@ application {
 tasks.shadowJar {
   duplicatesStrategy = DuplicatesStrategy.INCLUDE
   mergeServiceFiles()
-  archiveFileName.set("minimal.jar")
+  archiveFileName.set("dataplane.jar")
 }
 
 edcBuild {

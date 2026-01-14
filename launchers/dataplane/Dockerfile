@@ -1,6 +1,6 @@
 FROM eclipse-temurin:17-jdk
 
-COPY build/libs/minimal.jar /app/app.jar
+COPY build/libs/dataplane.jar /app/app.jar
 
 WORKDIR /app
 
