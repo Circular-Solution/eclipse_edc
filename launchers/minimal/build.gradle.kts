@@ -5,17 +5,18 @@ plugins {
 }
 
 dependencies {
-  implementation(project(":dist:bom:controlplane-base-bom"))
-  implementation(project(":dist:bom:dataplane-base-bom"))
-  implementation(project(":extensions:common:iam:iam-mock"))
-  implementation(project(":extensions:data-plane:data-plane-self-registration"))
+  runtimeOnly(project(":dist:bom:controlplane-base-bom"))
+  runtimeOnly(project(":dist:bom:dataplane-base-bom"))
+  runtimeOnly(project(":extensions:common:iam:iam-mock"))
+  runtimeOnly(project(":extensions:common:iam:decentralized-identity:identity-did-core"))
 }
 
 application {
   mainClass.set("org.eclipse.edc.boot.system.runtime.BaseRuntime")
 }
 
-tasks.withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
+tasks.shadowJar {
+  duplicatesStrategy = DuplicatesStrategy.INCLUDE
   mergeServiceFiles()
   archiveFileName.set("minimal.jar")
 }
