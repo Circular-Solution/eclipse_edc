@@ -9,6 +9,7 @@ dependencies {
   runtimeOnly(project(":extensions:common:iam:iam-mock"))
   runtimeOnly(project(":extensions:common:iam:decentralized-identity:identity-did-core"))
   runtimeOnly(project(":extensions:data-plane:data-plane-signaling:data-plane-signaling-client"))
+  runtimeOnly(project(":extensions:common:key-generator"))
 }
 
 application {

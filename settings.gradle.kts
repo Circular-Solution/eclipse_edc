@@ -179,6 +179,7 @@ include(":extensions:common:iam:decentralized-identity")
 include(":extensions:common:iam:decentralized-identity:identity-did-core")
 include(":extensions:common:iam:decentralized-identity:identity-did-web")
 include(":extensions:common:iam:iam-mock")
+include(":extensions:common:key-generator")
 include(":extensions:common:iam:oauth2:oauth2-client")
 include(":extensions:common:iam:verifiable-credentials")
 include(":extensions:common:iam:decentralized-claims")
@@ -262,6 +263,8 @@ include(":extensions:data-plane-selector:data-plane-selector-api")
 include(":extensions:data-plane-selector:data-plane-selector-client")
 include(":extensions:data-plane-selector:data-plane-selector-control-api")
 include(":extensions:data-plane-selector:store:sql:data-plane-instance-store-sql")
+
+include(":extensions:data-plane:data-plane-public-api")
 
 include(":extensions:policy-monitor:store:sql:policy-monitor-store-sql")
 

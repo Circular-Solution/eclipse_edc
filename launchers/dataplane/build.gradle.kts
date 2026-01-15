@@ -9,6 +9,7 @@ dependencies {
   runtimeOnly(project(":extensions:data-plane:data-plane-http"))
   runtimeOnly(project(":extensions:data-plane:data-plane-signaling:data-plane-signaling-api"))
   runtimeOnly(project(":extensions:data-plane:data-plane-self-registration"))
+  runtimeOnly(project(":extensions:data-plane:data-plane-public-api"))
 }
 
 application {
